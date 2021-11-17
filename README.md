@@ -30,12 +30,15 @@ Insert analysis of baseline here.
 
 #### The first iteration
 
-Insert image
+[Model_1_res_graph](https://user-images.githubusercontent.com/85522002/142088459-e96d273d-3879-42c2-bfe8-5576b1ab98b3.png)
 
-Insert analysis of first iteration
+The first iteration of the model takes in a whole lot of data, including the zipcodes, which we've discovered have a huge predictive effect. This leads to a very high R-squared, but not a lot of useful analysis.
 
 
-#### The final model
+
+
+#### The final model!
+
 
 Insert image
 
