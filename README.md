@@ -2,12 +2,9 @@
 Group project for phase 2 DS
 
 
-Our stakeholder is a property investor/redeveloper hoping to purchase and update properties.
-For the sake of this experiment, this developer is considering scraping the existing buildings.
-With this in mind, the developer is interested in both underlying values of the property and the
-more mutable properties. This developer is looking for a mismatch, where a property might have
-a high underlying value but other characteristics that aren't optimized. Finally, the developer 
-would want to know how to then optimize the property once it has been purchased.
+Our stakeholder is a property investor/redeveloper hoping to purchase and update properties. 
+
+For the sake of this experiment, this developer is considering scraping the existing buildings. With this in mind, the developer is interested in both underlying values of the property and the more mutable properties. This developer is looking for a mismatch, where a property might have a high underlying value but other characteristics that aren't optimized. Finally, the developer would want to know how to then optimize the property once it has been purchased.
 
 #### The following characteristics are being considered as 'fixed':
 
@@ -19,8 +16,17 @@ bedrooms, bathrooms, sqft_living, floors, sqft_above, grade
 
 Our exploration in the model will attempt to tease these factors apart in order to help guide our analysis.
 
+### Data cleaning
 
-#### The baseline model
+Some initial data cleaning needed to be done. 
+Zipcodes were processed out to make categorical data. 
+The waterfront data had some holes. After a quick check on the latitude/longitude data, it was decided that these missing data points were likely not waterfront property, and nulls were filled with nos.
+Grade was turned into numeric data.
+A quick check was run on sqft_living. To weed out extreme outliers, any values that were too different than the neighbors.
+
+
+
+### The baseline model
 
 Insert image
 
@@ -28,14 +34,17 @@ Insert image
 Insert analysis of baseline here.
 
 
-#### The first iteration
+### The first iteration
 
-Insert image
+![Model_1_res_graph](https://user-images.githubusercontent.com/85522002/142089408-705158f1-fe91-4d10-be58-79a612ce124e.png)
 
-Insert analysis of first iteration
+The first iteration of the model takes in a whole lot of data, including the zipcodes, which we've discovered have a huge predictive effect. This leads to a very high R-squared, but not a lot of useful analysis.
 
 
-#### The final model
+
+
+## The final model!
+
 
 Insert image
 
