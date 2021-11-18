@@ -19,73 +19,68 @@ Our exploration in the model will attempt to tease these factors apart in order 
 ### Data cleaning
 
 Some initial data cleaning needed to be done. 
-Zipcodes were processed out to make categorical data. 
+Several variables were processed out to make categorical data. 
 The waterfront data had some holes. After a quick check on the latitude/longitude data, it was decided that these missing data points were likely not waterfront property, and nulls were filled with nos.
 Grade was turned into numeric data.
 A quick check was run on sqft_living. To weed out extreme outliers, any values that were too different than the neighbors.
+A look at bedroom revealed an outlier. A process was devised to clean out anything over 3x standard deviations.
+
+### The simple model
+
+![Simplemodelresidual](https://user-images.githubusercontent.com/85522002/142444303-d0a01b33-4f2b-4308-acf7-ef22a926ec8b.png)
+
+Our simple model here looks only at sqft_living. This clearly needs work. 
+
+### The next iterations
+Several iterations of the model were tried, including  almost all available data, including the zipcodes, which we've discovered have a huge predictive effect. This leads to a very high R-squared, but not a lot of useful analysis. The model has a very high R-squared score of about .81
+
+![Fourth model graph](https://user-images.githubusercontent.com/85522002/142446202-56609ef5-8a8d-42dc-ae49-d4130d3221a2.png)
 
 
+However, the condition score here is unacceptably high at 3.591339787033922e+20
 
-### The baseline model
-
-Insert image
-
-
-Insert analysis of baseline here.
-
-
-### The first iteration
-
-![Model_1_res_graph](https://user-images.githubusercontent.com/85522002/142089408-705158f1-fe91-4d10-be58-79a612ce124e.png)
-
-The first iteration of the model takes in a whole lot of data, including the zipcodes, which we've discovered have a huge predictive effect. This leads to a very high R-squared, but not a lot of useful analysis.
-
-
-### The next iteration
+### A next step
 
 ![Prich_housing_in_out_king](https://user-images.githubusercontent.com/85522002/142224940-1c9ea6e6-68d7-4ef2-a590-5f2c72876bcd.png)
 
 For the next iteration a new category was created, collapsing the zipcode data into more useful metrics of 'in Seattle' and 'not in Seattle'. This allowed the model to still account for geographical location without becoming totally overwhelmed by the zipcode data. As the chart above shows, there is a difference in the distribution of prices within those two categories. 
 
-The model was then run through RFECV filtering, and features were selected that way. This model includes:
+## The Final Model
 
-**Fixed**
-C(waterfront)
-view
-sqft_living15
-sqft_lot15
-C(in_Seattle)
+The model was then run through RFECV filtering, and further narrowing of the model was done. Ultimately, the fixed features chosen were:
 
-**Fixable**
-bedrooms
-sqft_living
-floors
-grade_num
+Waterfront
+View
+and whether or not the property was in Seattle.
 
-In this model waterfront, views, and the location within Seattle clearly had a strong impact on final price. The livable square footage of neighboring lots had a moderate effect, about half of the effect of living square footage of the actual property. The square footage of neighboring lots had a minor negatively correlated effect, likely helping the model compensate for lower prices in more rural areas, supplementing the more brute caluclation in the zipcode. 
+Meanwhile the fixable features chosen were:
 
-As far as 'fixable' characteristics go, we find our most interesting results. The number of bedrooms and floors come in as negatively correlated. This is not to say that adding a bedroom to a home will nessesarily make it worse. An additional bedroom will come with additional square feet of living space, for instance. If we were to drop the sqft_living feature from the model, bedrooms would become a proxy for square footage and become positively correlated with price. However, given the inclusion of square footage, bedrooms themselves drop in priority. The group has theorized this as the 'room for activities' effect, where more luxerious housing might include less emphasis on simply sleeping and include more ammenities. 
+Bedrooms
+Floors_cat
+Grade
 
-Finally, grade clearly has a large positive effect on the price of the house. While not unexpected, this does confirm what our stakeholder hopes to hear. There is potencial value to be capture by purchasing homes with high 'fixed' scores (e.g., in Seattle, with a nice view, along the waterfront) but poor 'fixable' metrics (e.g. low grade, or small livable square footage). Additionally, this might guide our stakeholder's determination with regards to density of bedrooms and floors. While not nessesarily poor choices (again, an additional bedroom comes along with additional livable square footage) they should not be the factor focused on to maximize sales price.
+![Final model](https://user-images.githubusercontent.com/85522002/142446344-7c57d6a0-b75d-46cb-bb48-cfa7d63b6775.png)
 
-The extend to which this might be a profitable model will depend on construction costs, of course, but assuming that those costs are fairly even from location to location this model should help the client maximise efficiency when selecting locations to redevelop. 
+The model explains somewhat less of the variance than the fourth model in our iterations, with an R-squared score of around .56. However, by culling our features, we've reduced the condition number to about 65, a considerable improvement.
 
-## The final model!
+In the end our model comes with the following coefficients.
 
+Coefficients
+bedrooms_cat    42520.314097
+floors_cat     -22720.359516
+waterfront     529733.421212
+view            85930.752685
+grade_num_cat  188069.319191
+in_Seattle     130107.331040
 
-Insert image
+Unsurpisingly, placement within Seattle is important, as is a waterfront location and a good view. Our stakeholders should keep these factors in mind as they make purchases.
 
-Justify why the model is good/talk about weaknesses
+Helpfully, as our stakeholders might be hoping to hear, there is a considerable premium for higher grade homes and, space permitting, additional rooms. (Bedrooms here act, partially, as a proxy for overall house size.) Interestingly, floors are not in themselves bonuses. It may make sense to build vertically to increase bedroom count, but only if lot size won't allow horizontal expansion. 
 
-
-
+The extent to which this might be a profitable model will depend on construction costs, of course, but assuming that those costs are fairly even from location to location this model should help the client maximise efficiency when selecting locations to redevelop. 
 
 Insight 1 - Knowing the limitations of our model, we would recommend focusing on houses that are on the market for less than 1 million dollars. At prices above that, our model tends to under value homes and we cannot confidently predict prices above that point. 
 
-Insight 2 - 
-Insight 3
+### Recommendations
 
-
-
-
-Recommendation recommendation recommendation.
+Looking for zipcodes with high overall prices and relatively low grades to target for improvement seems a likely good course. For instance, the zipcode 98115 inside Seattle has a relative mismatch between average sale price, a relatively high 600751.99 and its average grade of around 7.31. Purchasing grade 4-6 houses there and redeveloping them up to 8-9 grade houses would result in considerable profit. 
