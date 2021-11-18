@@ -80,10 +80,9 @@ Justify why the model is good/talk about weaknesses
 
 
 
-Insight 1
+Insight 1 - Knowing the limitations of our model, we would recommend focusing on houses that are on the market for less than 1 million dollars. At prices above that, our model tends to under value homes and we cannot confidently predict prices above that point. 
 
-Insight 2 - Grade
-
+Insight 2 - 
 Insight 3
 
 
