@@ -1,6 +1,7 @@
-# phase_2_group_4
-Group project for phase 2 DS
+# Group 4 Phase 2 Project - King County Real Estate
+#### Julian, TJ, and Aalok
 
+## Introduction
 
 Our stakeholder is a property investor/redeveloper hoping to purchase and update properties. 
 
@@ -15,6 +16,13 @@ Zipcode, view, waterfront, sqft_living15, sqft_lot15, lat and long, sqft_lot
 bedrooms, bathrooms, sqft_living, floors, sqft_above, grade
 
 Our exploration in the model will attempt to tease these factors apart in order to help guide our analysis.
+
+
+
+### Bottom Line Up Front
+
+  There is opporutunity in the King County area to purchase low grade housing in high value locations.
+
 
 ### Data cleaning
 
@@ -73,7 +81,7 @@ view            85930.752685
 grade_num_cat  188069.319191
 in_Seattle     130107.331040
 
-Unsurpisingly, placement within Seattle is important, as is a waterfront location and a good view. Our stakeholders should keep these factors in mind as they make purchases.
+Unsurpisingly, placement within Seattle is important, as is a waterfront location and a good view. Our stakeholders should keep these factors in mind as they make purchases. Although our stakeholders can't directly change these variables themselves, removing them from the model would make the model far less predictive.
 
 Helpfully, as our stakeholders might be hoping to hear, there is a considerable premium for higher grade homes and, space permitting, additional rooms. (Bedrooms here act, partially, as a proxy for overall house size.) Interestingly, floors are not in themselves bonuses. It may make sense to build vertically to increase bedroom count, but only if lot size won't allow horizontal expansion. 
 
@@ -81,6 +89,9 @@ The extent to which this might be a profitable model will depend on construction
 
 Insight 1 - Knowing the limitations of our model, we would recommend focusing on houses that are on the market for less than 1 million dollars. At prices above that, our model tends to under value homes and we cannot confidently predict prices above that point. 
 
+
 ### Recommendations
 
-Looking for zipcodes with high overall prices and relatively low grades to target for improvement seems a likely good course. For instance, the zipcode 98115 inside Seattle has a relative mismatch between average sale price, a relatively high 600751.99 and its average grade of around 7.31. Purchasing grade 4-6 houses there and redeveloping them up to 8-9 grade houses would result in considerable profit. 
+Looking for zipcodes with high overall prices and relatively low grades to target for improvement seems to be an opportunity to maximize profits. 
+
+For instance, the zipcode 98115 inside Seattle has a relative mismatch between average sale price, a relatively high 600751.99 and its average grade of around 7.31. Purchasing grade 4-6 houses there and redeveloping them up to 8-9 grade houses would result in considerable profit. 
