@@ -73,22 +73,22 @@ The model explains somewhat less of the variance than the fourth model in our it
 
 In the end our model comes with the following coefficients.
 
-Coefficients\
+##### Coefficients
 
 bedrooms_cat    
-42520.314097\
+42520.314097
 
 floors_cat
--22720.359516\
+-22720.359516
 
 waterfront
-529733.421212\
+529733.421212
 
 view
-85930.752685\
+85930.752685
 
 grade_num_cat
-188069.319191\
+188069.319191
 
 in_Seattle
 130107.331040
