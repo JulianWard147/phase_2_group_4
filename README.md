@@ -78,19 +78,19 @@ In the end our model comes with the following coefficients.
 bedrooms_cat    
 42520.314097
 
-floors_cat
+floors_cat\
 -22720.359516
 
-waterfront
+waterfront\
 529733.421212
 
-view
+view\
 85930.752685
 
-grade_num_cat
+grade_num_cat\
 188069.319191
 
-in_Seattle
+in_Seattle\
 130107.331040
 
 Unsurpisingly, placement within Seattle is important, as is a waterfront location and a good view. Our stakeholders should keep these factors in mind as they make purchases. Although our stakeholders can't directly change these variables themselves, removing them from the model would make the model far less predictive.
