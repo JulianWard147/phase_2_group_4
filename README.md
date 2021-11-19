@@ -6,7 +6,7 @@
 Inside this repo you will find:
 
 * A PDF of our final presentation - [link here](https://github.com/JulianWard147/phase_2_group_4/blob/69e6808b8be13c26e68c7e0719a1d193545df5e7/Project%202%20%20Group%204%20Slides%20.pdf)
-* A finalized main notebook, 1_FINAL_MAIN_NOTEBOOK.ipynb, which runs and stands alone containing all relevant findings.
+* A finalized main notebook, [1_FINAL_MAIN_NOTEBOOK.ipynb](https://github.com/JulianWard147/phase_2_group_4/blob/ea5d427bdb8d8e5c3daaadae2e9569392eba111a/1_FINAL_MAIN_NOTEBOOK.ipynb), which runs and stands alone containing all relevant findings.
 * A number of exploratory notebooks that were used to test information or code away from the main notebook.
   * Each of these has the name of the notebook's main 'author' at the front.
 * A data file with the King County data provided by the Flatiron School.
