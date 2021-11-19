@@ -1,6 +1,16 @@
 # Group 4 Phase 2 Project - King County Real Estate
 #### Julian, TJ, and Aalok
 
+#### A quick guide to our repo
+
+Inside this repo you will find:
+
+* A PDF of our final presentation - [link here](https://github.com/JulianWard147/phase_2_group_4/blob/69e6808b8be13c26e68c7e0719a1d193545df5e7/Project%202%20%20Group%204%20Slides%20.pdf)
+* A finalized main notebook, 1_FINAL_MAIN_NOTEBOOK.ipynb, which runs and stands alone containing all relevant findings.
+* A number of exploratory notebooks that were used to test information or code away from the main notebook
+* * Each of these has the notebook's main 'author' at the front
+* A data file with the King County data provided by the Flatiron School.
+
 ## Introduction
 
 Our stakeholder is a property investor/redeveloper hoping to purchase and update properties. 
