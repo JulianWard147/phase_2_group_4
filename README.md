@@ -100,11 +100,10 @@ Helpfully, as our stakeholders might be hoping to hear, there is a considerable 
 
 The extent to which this might be a profitable model will depend on construction costs, of course, but assuming that those costs are fairly even from location to location this model should help the client maximise efficiency when selecting locations to redevelop. 
 
-Insight 1 - Knowing the limitations of our model, we would recommend focusing on houses that are on the market for less than 1 million dollars. At prices above that, our model tends to under value homes and we cannot confidently predict prices above that point. 
-
+Knowing the limitations of our model, we would recommend focusing on houses that are on the market for less than 1 million dollars. At prices above that, our model tends to under value homes and we cannot confidently predict prices above that point. 
 
 ### Recommendations
 
 Looking for zipcodes with high overall prices and relatively low grades to target for improvement seems to be an opportunity to maximize profits. 
 
-For instance, the zipcode 98115 inside Seattle has a relative mismatch between average sale price, a relatively high 600751.99 and its average grade of around 7.31. Purchasing grade 4-6 houses there and redeveloping them up to 8-9 grade houses would result in considerable profit. 
+For instance, the zipcode 98115 inside Seattle has a relative mismatch between average sale price, a relatively high 600751.99 and its average grade of around 7.31. Our model suggests that purchasing grade 4-6 houses there and redeveloping them up to 8-9 grade houses would result in considerable profit. 
