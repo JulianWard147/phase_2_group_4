@@ -31,7 +31,7 @@ Our exploration in the model will attempt to tease these factors apart in order 
 
 ### Bottom Line Up Front
 
-  There is opporutunity in the King County area to purchase low grade housing in high value locations.
+  There is opportunity  in the King County area to purchase low grade housing in high value locations.
 
 
 ### Data cleaning
