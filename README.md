@@ -40,7 +40,7 @@ Some initial data cleaning needed to be done.
 Several variables were processed out to make categorical data. 
 The waterfront data had some holes. After a quick check on the latitude/longitude data, it was decided that these missing data points were likely not waterfront property, and nulls were filled with nos.
 Grade was turned into numeric data.
-A quick check was run on sqft_living. To weed out extreme outliers, any values that were too different than the neighbors.
+A quick check was run on sqft_living. To weed out extreme outliers, we dropped any values that were too different than their neighbors.
 A look at bedroom revealed an outlier. A process was devised to clean out anything over 3x standard deviations.
 
 ### The simple model
